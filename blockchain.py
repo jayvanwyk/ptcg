@@ -1,7 +1,10 @@
 blockchain = [[0]]
 
+def get_last_blockchain_value():
+    return blockchain[-1]
+
 def add_value(amount):
-    blockchain.append([blockchain[-1], amount])
+    blockchain.append([get_last_blockchain_value(), amount])
     print(blockchain)
 
 add_value(1.4)
